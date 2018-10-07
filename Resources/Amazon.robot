@@ -1,13 +1,12 @@
 *** Settings ***
 Library  SeleniumLibrary
+Resource  ../Resources/PO/LandingPage.robot
+Resource  ../Resources/PO/TopNav.robot
 
 *** Variables ***
 
 *** Keywords ***
 Search for Products
-    go to  http://www.amazon.com
-    wait until page contains  Switzerland
-    input text  id=twotabsearchtextbox  Ferrari 458
-    sleep  3
-    click button  css=#nav-search > form > div.nav-right > div > input
-    sleep  3
+    LandingPage.Load
+    LandingPage.Verify Page Loaded
+    TopNav.Search for Products

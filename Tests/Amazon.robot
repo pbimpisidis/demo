@@ -9,7 +9,7 @@ Test Teardown   End Web Test    #runs after every test case
 
 
 *** Test Cases ***
-User must sign in to check out
+Search for Products
     [Documentation]  basic info
     [Tags]  Smoke
     Amazon.Search for products
